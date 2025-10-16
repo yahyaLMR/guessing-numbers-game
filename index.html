@@ -3,33 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Number Guessing Game</title>
   </head>
-  <body style="display: flex;justify-content: center;align-items: center;">
-    <div><input 
-      style="margin: 50px; background: #222; padding: 10px; font-size: 20px"
-      type="number"
-      maxlength="3"
-      min="0"
-      max="100"
-      id="input"
-    />
-    <button
-        onclick=sub()
-      style="
-        margin: 50px;
-        background: #555;
-        padding: 10px;
-        font-size: 20px;
-        border: #aaa solid 2px;
-        cursor: pointer;
-      "
-      id="submit"
-    >
-      submit
-    </button>
-    <div style="margin: 50px; padding: 10px; font-size: 20px;width: 300px;"><h2 id="h2"></h2><h3 style="cursor: pointer;color: cyan;" id="h3"></h3></div>
-</div>
+  <body>
+    <div class="game-container">
+      <h1>🎯 Number Guessing Game</h1>
+      <p class="subtitle">Can you guess the mystery number?</p>
+      
+      <div class="input-container">
+        <input 
+          type="number"
+          min="0"
+          max="100"
+          id="input"
+          placeholder="Enter your guess (0-100)"
+        />
+      </div>
+      
+      <button onclick="sub()" id="submit">
+        Make Your Guess
+      </button>
+      
+      <div class="message-container">
+        <h2 id="h2"></h2>
+        <h3 id="h3"></h3>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
